@@ -1,12 +1,6 @@
-// getting stuff from the JSON
-
 var arr = JSON.parse(array);
 
-// table for the info made
-
 console.table(arr);
-
-// extract info in the cards
 
 for (let value of arr) {
     document.getElementById("result").innerHTML += `
@@ -19,9 +13,44 @@ for (let value of arr) {
       <hr>
       <p class="card-text">${value.dueTime} <br></p>
       <hr>
-      <p>Priority level:<button class="btn btn-sm pt-1 pb-1">${value.importance}</button></p><br>
+      <button id="importance" class="impBut btn btn-md border pt-1 pb-1 mb-3 ">Priority level: ${value.importance}</button><br>
       <button class="btn btn-sm bg-danger text-light me-2">Delete</button><button class="btn btn-sm bg-success text-light">Done</button>
     </div>
   </div>
     `;
 }
+
+var count = 0;
+var impBut = document.getElementsByClassName("impBut");
+
+for (let i in arr) {
+    impBut[i].onclick = function() {
+        count++;
+        impBut[i].innerHTML = `Priority level: ${count}`;
+
+        switch (true) {
+            case (count <= 1):
+                impBut[i].style.background = "green";
+                break;
+            case (count >= 2 && count <= 3):
+                impBut[i].style.background = "yellow";
+                break;
+            case (count >= 4 && count <= 5):
+                impBut[i].style.background = "red";
+                break;
+            default:
+                impBut[i].style = "white";
+        }
+    }
+}
+
+// let countEl = document.getElementById("importance");
+// console.log(countEl);
+
+// let count = 0;
+// countEl.addEventListener("click", increment);
+
+// function increment() {
+//     count = count + 1;
+//     countEl.innerText = `Priority level: ${count}`;;
+// }
