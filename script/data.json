@@ -1,0 +1,55 @@
+let array = `[{
+        "taskName": "Buy groceries",
+        "image": "https://images.pexels.com/photos/4020557/pexels-photo-4020557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Groceries for the family dinner",
+        "dueTime": "Friday, 17:00",
+        "importance": 0
+    }, {
+        "taskName": "Family Dinner",
+        "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+        "description": "Call Mom and Dad",
+        "dueTime": "Saturday, 18:00",
+        "importance": 0
+    }, {
+        "taskName": "Homework",
+        "image": "https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Read Pre-Work",
+        "dueTime": "Mo-Th. till 19:00",
+        "importance": 0
+    }, {
+        "taskName": "Running",
+        "image": "https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Every morning, 7:00",
+        "dueTime": "Mo-Th. till 19:00",
+        "importance": 0
+    }, {
+        "taskName": "Reading books",
+        "image": "https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "I want to read at least 1 book/month",
+        "dueTime": "Mo-Th. till 19:00",
+        "importance": 0
+    }, {
+        "taskName": "Go swimming",
+        "image": "https://images.pexels.com/photos/261025/pexels-photo-261025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Keep swimming every 3rd day",
+        "dueTime": "Mo-Th. till 19:00",
+        "importance": 0
+    }, {
+        "taskName": "Skiing with Ben",
+        "image": "https://images.pexels.com/photos/3193846/pexels-photo-3193846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Try new places",
+        "dueTime": "Sun., 10:00",
+        "importance": 0
+    }, {
+        "taskName": "Dancing with my girls",
+        "image": "https://images.pexels.com/photos/2240763/pexels-photo-2240763.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Marina´s b-day",
+        "dueTime": "Sat., 21:00",
+        "importance": 0
+    }, {
+        "taskName": "Help Mom",
+        "image": "https://images.pexels.com/photos/3791666/pexels-photo-3791666.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Go to Ikea",
+        "dueTime": "Wed., 17:00",
+        "importance": 0
+    }]`;
