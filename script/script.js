@@ -13,7 +13,7 @@ for (let value of arr) {
       <hr>
       <p class="card-text">${value.dueTime} <br></p>
       <hr>
-      <button id="importance" class="impBut btn btn-md border pt-1 pb-1 mb-3 ">Priority level: ${value.importance}</button><br>
+      <button id="importance" class="impBut btn btn-md border pt-1 pb-1 mb-3 bg-success ">Priority level: ${value.importance}</button><br>
       <button class="btn btn-sm bg-danger text-light me-2">Delete</button><button class="btn btn-sm bg-success text-light">Done</button>
     </div>
   </div>
@@ -31,29 +31,48 @@ for (let i in arr) {
         }
 
         switch (true) {
-            case (count <= 1):
-                impBut[i].style.background = "green";
+            case (count >= 0 && count <= 1):
+                impBut[i].classList.add("bg-success");
                 break;
             case (count >= 2 && count <= 3):
-                impBut[i].style.background = "yellow";
+                impBut[i].classList.add("bg-warning");
                 break;
             case (count >= 4 && count <= 5):
-                impBut[i].style.background = "red";
+                impBut[i].classList.add("bg-danger");
                 break;
             case (count > 5):
                 count = 0;
-            default:
-                impBut[i].style = "white";
         }
-
     }
 }
 
-if (impBut[i].innerHTML > impBut[i + 1].innerHTML)
-    impBut[i].innerHTML = `Priority level: ${count}`;
 
-Bubble Sort
+// if (impBut[i].innerHTML > impBut[i + 1].innerHTML)
+//     impBut[i].innerHTML = `Priority level: ${count}`;
+// Bubble Sort
 
+// for (let i in arr) {
+//     impBut[i].onclick = function() {
+//         count++;
+//         if (count <= 5) {
+//             impBut[i].innerHTML = `Priority level: ${count}`;
+//         }
+
+//         switch (true) {
+//             case (count >= 0 && count <= 1):
+//                 impBut[i].classList.add("bg-success");
+//                 break;
+//             case (count >= 2 && count <= 3):
+//                 impBut[i].classList.add("bg-warning");
+//                 break;
+//             case (count >= 4 && count <= 5):
+//                 impBut[i].classList.add("bg-danger");
+//                 break;
+//             default:
+//                 impBut[i].style = "white";
+//         }
+//     }
+// }
 
 // Try #2 
 
