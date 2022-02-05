@@ -66,9 +66,10 @@ for (let ind in arr) {
 // Sort priority level / at least I tried!
 
 // 1. var arr (line 1) is already one array
-// 2. 
+// 2. arr.sort(function(${arr[ind].importance}, ${arr[ind + 1].importance}){return ${arr[ind + 1].importance} - ${arr[ind].importance}});
 
-// Next try:
+
+// Another sorting idea:
 // var priorlvl = document.getElementsByClassName("priorlvl");
 // 
 // if (priorlvl[i].innerHTML > priorlvl[i + 1].innerHTML)
