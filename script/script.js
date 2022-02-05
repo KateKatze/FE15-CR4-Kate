@@ -2,13 +2,13 @@ var arr = JSON.parse(array);
 
 for (let ind in arr) {
     document.getElementById("result").innerHTML += `
-    <div class="card col-lg-3 col-md-4 col-sm-11 m-1 shadow p-3 mb-5 bg-white rounded">
+    <div class="card col-lg-3 col-md-4 col-sm-9 m-1 shadow p-3 mb-5 bg-white rounded">
         <div class="card-header rounded bg-dark text-light p-2 mb-1 d-flex justify-content-between ">
             <h6>Task</h6>
             <i class="fa fa-bookmark-o" style="font-size:18px"></i> 
         </div>
 
-        <img src="${arr[ind].image}" class="card-img-top h-100" alt="${arr[ind].taskName}">
+        <img src="${arr[ind].image}" class="card-img-top" alt="${arr[ind].taskName}">
 
         <div class="card-body">
             <h4 class="card-title">${arr[ind].taskName}</h4>
@@ -25,7 +25,7 @@ for (let ind in arr) {
             <div class="d-flex">
                 <button class="importance btn btn-md mb-1 bg-transparent"><i class="fa fa-bomb" style="font-size:20px;"></i></button>
                 <h6 class="mt-2">Due time: </h6>
-                <p class="impBut card-text pt-1 ms-2">${arr[ind].dueTime}</p>
+                <p class="card-text pt-1 ms-2">${arr[ind].dueTime}</p>
             </div>
         </div>
 
