@@ -13,8 +13,11 @@ for (let value of arr) {
       <hr>
       <p class="card-text">${value.dueTime} <br></p>
       <hr>
-      <button id="importance" class="impBut btn btn-md border pt-1 pb-1 mb-3 bg-success ">Priority level: ${value.importance}</button><br>
-      <button class="btn btn-sm bg-danger text-light me-2">Delete</button><button class="btn btn-sm bg-success text-light">Done</button>
+      <p 
+      <button id="importance" class="btn btn-md border pt-1 pb-1 mb-3 bg-success "><i class="fa fa-hand-peace-o"></i> Priority level:</button> <p class="impBut card-text">${value.importance}</p>
+      <p class="card-text float-end">
+      <button class="btn btn-sm bg-danger text-light me-2"><i class="fa fa-trash-o me-1"></i>Delete</button><button class="btn btn-sm bg-success text-light"><i class="fa fa-check me-1"></i>Done</button>
+      </p>
     </div>
   </div>
     `;
@@ -27,7 +30,7 @@ for (let i in arr) {
     impBut[i].onclick = function() {
         count++;
         if (count <= 5) {
-            impBut[i].innerHTML = `Priority level: ${count}`;
+            impBut[i].innerHTML = `${count}`;
         }
 
         switch (true) {
