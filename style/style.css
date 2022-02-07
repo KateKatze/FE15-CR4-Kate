@@ -1,4 +1,7 @@
 @media screen and (min-width: 320px) and (max-width: 480px) {
+    .card {
+        width: 85%;
+    }
     .fontsm {
         font-size: small;
     }
@@ -15,6 +18,9 @@
 }
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
     .fontsm {
         font-size: small;
     }
@@ -31,6 +37,9 @@
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        width: 48%;
+    }
     .fontsm {
         font-size: small;
     }
@@ -46,6 +55,11 @@
     }
 }
 
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+    .card {
+        width: 32%;
+    }
+}
 
-/* @media screen and (min-width: 1025px) and (max-width: 1200px) {}
-@media screen and (max-width:1201px) {} */
+
+/* @media screen and (max-width:1201px) {} */
