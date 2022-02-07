@@ -1,74 +1,6 @@
 var arr = JSON.parse(array);
 
-for (let ind in arr) {
-    document.getElementById("result").innerHTML += `
-    <div class="card col-lg-3 col-md-7 col-sm-4 col-xs-4 m-1 shadow p-3 mb-5 bg-white rounded">
-        <div class="card-header rounded bg-dark text-light p-2 mb-1 d-flex justify-content-between ">
-            <h6 class="fontsm">Task</h6>
-            <i class="fa fa-bookmark-o" style="font-size:18px"></i> 
-        </div>
-
-        <img src="${arr[ind].image}" class="card-img-top" alt="${arr[ind].taskName}">
-
-        <div class="card-body">
-            <h4 class="card-title">${arr[ind].taskName}</h4>
-            <hr>
-            <p class="card-text">${arr[ind].description}</p>
-            <hr>
-
-            <div class="d-flex text-align justify-content-start">
-                <button class="priorlvl btn btn-md mb-1 bg-transparent"><i class="fa fa-hand-peace-o" style="font-size:20px;"></i></button>
-                <h6 class="fontsm mt-3">Priority level: </h6>
-                <p id="importn${ind}" class="prsm card-text rounded bg-success px-3 py-2 mt-1 ms-2 mb-2 impNum">${arr[ind].importance}</p>
-            </div>
-
-            <div class="d-flex">
-                <button class="importance btn btn-md mb-1 bg-transparent"><i class="fa fa-bomb" style="font-size:20px;"></i></button>
-                <h6 class="fontsm mt-2">Due time: </h6>
-                <p class="fontsmp card-text pt-1 ms-2">${arr[ind].dueTime}</p>
-            </div>
-        </div>
-
-        <div class="card-footer">
-            <button class="btn btn-sm bg-danger text-light me-2">
-                <i class="fa fa-trash-o me-1"></i>Delete
-            </button>
-            <button class="btn btn-sm bg-success text-light">
-                <i class="fa fa-check me-1"></i>Done
-            </button>
-        </div>
-
-    </div>
-    `;
-}
-
-
-for (let ind in arr) {
-
-    document.getElementsByClassName("priorlvl")[ind].addEventListener("click", function() {
-        var counting = document.getElementById(`importn${ind}`);
-        arr[ind].importance++;
-        // if (arr[ind].importance < 5) {
-        //     counting.innerHTML++;
-        // }
-        counting.innerHTML = arr[ind].importance;
-
-        if (arr[ind].importance <= 1) {
-            counting.classList.add("bg-success");
-        } else if (arr[ind].importance <= 3) {
-            counting.classList.add("bg-warning");
-        } else {
-            counting.classList.add("bg-danger");
-        }
-    })
-}
-
-document.getElementsByClassName("btnSort")[0].addEventListener("click", sortImportance);
-
-function sortImportance() {
-    arr.sort((a, b) => b.importance - a.importance);
-    document.getElementById("result").innerHTML = "";
-
+function printContent() {
     for (let ind in arr) {
         document.getElementById("result").innerHTML += `
     <div class="card col-lg-3 col-md-7 col-sm-4 col-xs-4 m-1 shadow p-3 mb-5 bg-white rounded">
@@ -110,8 +42,6 @@ function sortImportance() {
     </div>
     `;
     }
-
-
     for (let ind in arr) {
 
         document.getElementsByClassName("priorlvl")[ind].addEventListener("click", function() {
@@ -131,6 +61,18 @@ function sortImportance() {
             }
         })
     }
+}
+printContent();
+
+
+document.getElementsByClassName("btnSort")[0].addEventListener("click", sortImportance);
+
+function sortImportance() {
+    arr.sort((a, b) => b.importance - a.importance);
+    document.getElementById("result").innerHTML = "";
+
+    printContent();
+
 }
 
 // Sort priority level tries:
