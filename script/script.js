@@ -1,10 +1,16 @@
 var arr = JSON.parse(array);
 
-for (let ind in arr) {
-    document.getElementById("result").innerHTML += `
-    <div class="card col-lg-3 col-md-4 col-sm-9 m-1 shadow p-3 mb-5 bg-white rounded">
+document.getElementsByClassName("btnSort")[0].addEventListener("click", sortImportance);
+
+function sortImportance() {
+    arr.sort((a, b) => b.importance - a.importance);
+    document.getElementById("result").innerHTML = "";
+
+    for (let ind in arr) {
+        document.getElementById("result").innerHTML += `
+    <div class="card col-lg-3 col-md-4 col-sm-9 col-xs-7 m-1 shadow p-3 mb-5 bg-white rounded">
         <div class="card-header rounded bg-dark text-light p-2 mb-1 d-flex justify-content-between ">
-            <h6>Task</h6>
+            <h6 class="fontsm">Task</h6>
             <i class="fa fa-bookmark-o" style="font-size:18px"></i> 
         </div>
 
@@ -18,14 +24,14 @@ for (let ind in arr) {
 
             <div class="d-flex text-align justify-content-start">
                 <button class="priorlvl btn btn-md mb-1 bg-transparent"><i class="fa fa-hand-peace-o" style="font-size:20px;"></i></button>
-                <h6 class="mt-3">Priority level: </h6>
-                <p id="importn${ind}" class="card-text rounded bg-success px-3 py-2 mt-1 ms-2 mb-2">${arr[ind].importance}</p>
+                <h6 class="fontsm mt-3">Priority level: </h6>
+                <p id="importn${ind}" class="prsm card-text rounded bg-success px-3 py-2 mt-1 ms-2 mb-2 impNum">${arr[ind].importance}</p>
             </div>
 
             <div class="d-flex">
                 <button class="importance btn btn-md mb-1 bg-transparent"><i class="fa fa-bomb" style="font-size:20px;"></i></button>
-                <h6 class="mt-2">Due time: </h6>
-                <p class="card-text pt-1 ms-2">${arr[ind].dueTime}</p>
+                <h6 class="fontsm mt-2">Due time: </h6>
+                <p class="fontsmp card-text pt-1 ms-2">${arr[ind].dueTime}</p>
             </div>
         </div>
 
@@ -40,30 +46,31 @@ for (let ind in arr) {
 
     </div>
     `;
+    }
+
+
+    for (let ind in arr) {
+
+        document.getElementsByClassName("priorlvl")[ind].addEventListener("click", function() {
+            var counting = document.getElementById(`importn${ind}`);
+            arr[ind].importance++;
+            // if (arr[ind].importance < 5) {
+            //     counting.innerHTML++;
+            // }
+            counting.innerHTML = arr[ind].importance;
+
+            if (arr[ind].importance <= 1) {
+                counting.classList.add("bg-success");
+            } else if (arr[ind].importance <= 3) {
+                counting.classList.add("bg-warning");
+            } else {
+                counting.classList.add("bg-danger");
+            }
+        })
+    }
 }
 
-
-for (let ind in arr) {
-
-    document.getElementsByClassName("priorlvl")[ind].addEventListener("click", function() {
-        var counting = document.getElementById(`importn${ind}`);
-
-        if (counting.innerHTML < 5) {
-            counting.innerHTML++;
-        }
-
-        if (counting.innerHTML <= 1) {
-            counting.classList.add("bg-success");
-        } else if (counting.innerHTML <= 3) {
-            counting.classList.add("bg-warning");
-        } else {
-            counting.classList.add("bg-danger");
-        }
-    })
-}
-
-
-// Sort priority level / at least I tried!
+// Sort priority level tries:
 
 // 1. var arr (line 1) is already one array
 // 2. arr.sort(function(${arr[ind].importance}, ${arr[ind + 1].importance}){return ${arr[ind + 1].importance} - ${arr[ind].importance}});

@@ -1,7 +1,7 @@
 let array = `[{
         "taskName": "Buy groceries",
         "image": "https://images.pexels.com/photos/4020557/pexels-photo-4020557.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "description": "Groceries for the family dinner",
+        "description": "Sat. - family dinner",
         "dueTime": "Friday, 17:00",
         "importance": 0
     }, {
@@ -18,30 +18,30 @@ let array = `[{
         "importance": 0
     }, {
         "taskName": "Running",
-        "image": "https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "image": "https://cdn.pixabay.com/photo/2021/05/14/08/44/running-6252827__340.jpg",
         "description": "Every morning, 7:00",
         "dueTime": "Mo-Sat.",
         "importance": 0
     }, {
         "taskName": "Reading books",
         "image": "https://images.pexels.com/photos/904616/pexels-photo-904616.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "description": "I want to read at least 1 book/month",
+        "description": "1 book/month",
         "dueTime": "-",
         "importance": 0
     }, {
         "taskName": "Go swimming",
-        "image": "https://images.pexels.com/photos/261025/pexels-photo-261025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "description": "Keep swimming every 3rd day",
+        "image": "https://cdn.pixabay.com/photo/2016/11/22/21/43/woman-1850709__340.jpg",
+        "description": "Do every 3rd day",
         "dueTime": "Mo-Th. till 19:00",
         "importance": 0
     }, {
-        "taskName": "Skiing with Ben",
+        "taskName": "Skiing",
         "image": "https://images.pexels.com/photos/3193846/pexels-photo-3193846.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "description": "Try new places",
         "dueTime": "Sun., 10:00",
         "importance": 0
     }, {
-        "taskName": "Dancing with my girls",
+        "taskName": "Dancing",
         "image": "https://images.pexels.com/photos/2240763/pexels-photo-2240763.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
         "description": "Marina´s b-day",
         "dueTime": "Sat., 21:00",
